@@ -49,9 +49,9 @@ static async Task WriteEnumIdentifierAsync(StreamWriter writer, CodepointToken t
 {
 	var (identifier, description) = token;
 	await writer.WriteLineAsync($"""
-	                                [Description("\u{description}")]
-	                                {identifier},
-	                            """);
+                                    [Description("\u{description}")]
+                                    {identifier},
+                                """);
 }
 
 static async Task WriteEndEnumAsync(StreamWriter writer)
